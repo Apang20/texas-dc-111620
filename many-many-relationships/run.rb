@@ -22,12 +22,15 @@ class Doctor
             appointment.doctor == self
         end
         all_patients = all_app.collect do  | appointment |
-            appointment.patient.name
+            # appointment.patient.name
+            appointment.patient.name.uniq 
         end
         # all_patients.map do  | patient |
         #     patient.name
         # end
     end
+
+
 
     # post lecture exercises: 
     # patients method should only return UNIQUE values
